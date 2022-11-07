@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar h-20 mb-8 bg-base-100">
             <div className="navbar-start">
                 {/* <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -13,7 +14,7 @@ const Header = () => {
                         <li><a href="/">Blog</a></li>
                     </ul>
                 </div> */}
-                <a href="/" className="btn btn-ghost normal-case text-xl">Perfect Painters</a>
+                <Link href="/" className="btn btn-ghost normal-case text-xl">Perfect Painters</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
