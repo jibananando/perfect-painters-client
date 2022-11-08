@@ -23,6 +23,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <ul className="menu menu-horizontal p-0">
+                    <li><a href="/signup">Sign up</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
                 <a href="/" className="btn">Get started</a>
             </div>
         </div>
