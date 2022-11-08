@@ -14,20 +14,19 @@ const Header = () => {
                         <li><a href="/">Blog</a></li>
                     </ul>
                 </div> */}
-                <Link href="/" className="btn btn-ghost normal-case text-xl">Perfect Painters</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-4xl">Perfect Painters</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a href="/signup">Sign up</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><Link to="/signup">Sign up</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
-                <a href="/" className="btn">Get started</a>
             </div>
         </div>
     );
