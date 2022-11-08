@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SocialSignUp from '../SocialSignUp/SocialSignUp';
 
 const Login = () => {
 
@@ -27,9 +28,14 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
-                            <p>Don't have an account? <Link to='/signup'>Sign up</Link> </p>
                         </div>
                     </form>
+                    <div>
+                        <div className="form-control">
+                            <SocialSignUp></SocialSignUp>
+                            <p className='mb-6 text-center'>Don't have an account?  <Link className='text-orange-600' to='/signup' >Sign up</Link> </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
