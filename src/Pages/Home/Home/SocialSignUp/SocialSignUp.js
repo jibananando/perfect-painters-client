@@ -1,6 +1,7 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
+import { FcGoogle } from 'react-icons/fc';
 
 const SocialSignUp = () => {
 
@@ -21,7 +22,7 @@ const SocialSignUp = () => {
     return (
         <div className="card-body">
             <div className="form-control">
-                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary">Login With Google</button>
+                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary">Login With Google  <FcGoogle className='ml-2'></FcGoogle> </button>
             </div>
         </div>
     );
