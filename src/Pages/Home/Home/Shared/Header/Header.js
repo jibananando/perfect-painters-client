@@ -37,6 +37,8 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <ul className="menu menu-horizontal p-0">
+                    <li><Link to="/addService">Add Service</Link></li>
+                    <li><Link to="/myReview">My Review</Link></li>
                     <li><Link to="/signup">Sign up</Link></li>
                     <li><Link to="/login">Login</Link></li>
                 </ul>
