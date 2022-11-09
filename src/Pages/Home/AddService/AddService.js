@@ -41,7 +41,7 @@ const AddService = () => {
                                 <label className="label">
                                     <span className="label-text">Image URL</span>
                                 </label>
-                                <input type="url" name="url" placeholder="Image url" className="input input-bordered" required />
+                                <input type="text" name="url" placeholder="Image url" className="input input-bordered" required />
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
