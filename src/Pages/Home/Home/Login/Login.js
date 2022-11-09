@@ -33,7 +33,7 @@ const Login = () => {
                     <div>
                         <div className="form-control">
                             <SocialSignUp></SocialSignUp>
-                            <p className='mb-6 text-center'>Don't have an account?  <Link className='text-orange-600' to='/signup' >Sign up</Link> </p>
+                            <p className='mb-6 text-center'>Don't have an account? <Link className='text-orange-600' to='/signup' >Sign up</Link> </p>
                         </div>
                     </div>
                 </div>
