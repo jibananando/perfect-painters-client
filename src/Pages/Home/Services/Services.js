@@ -1,91 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useTitle from '../../../hooks/useTitle';
+import ServiceCard from './ServiceCard';
 
 const Services = () => {
     useTitle('Services');
+    const [services, setServices] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/services')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
 
     return (
         <div>
             <div><h1 className="text-4xl font-bold text-center m-4">All Services</h1></div>
-            <div className='grid grid-cols-3 gap-4 justify-items-center'>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div><div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">Name: ?</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <p>Price: $</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
+                {
+                    services.map(service => <ServiceCard
+                        key={service._id}
+                        service={service}
+                    ></ServiceCard>)
+                }
             </div>
         </div>
     );
