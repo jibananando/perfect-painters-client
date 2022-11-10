@@ -1,6 +1,9 @@
 import React from 'react';
+import useTitle from '../../../hooks/useTitle';
 
 const Services = () => {
+    useTitle('Services');
+
     return (
         <div>
             <div><h1 className="text-4xl font-bold text-center m-4">All Services</h1></div>

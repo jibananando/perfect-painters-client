@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../../hooks/useTitle';
 import SocialSignUp from '../SocialSignUp/SocialSignUp';
 
 const Login = () => {
-
+    useTitle('Login');
     const handleLogin = event => {
         event.preventDefault();
     }

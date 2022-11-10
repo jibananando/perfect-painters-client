@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const AddService = () => {
+    useTitle('AddService');
 
     const { createService } = useContext(AuthContext);
 
@@ -49,7 +51,7 @@ const AddService = () => {
                                 <label className="label">
                                     <span className="label-text">Short description</span>
                                 </label>
-                                <input type="text" name="description" placeholder="Description" className="input input-bordered" required />
+                                <textarea type="text" name="description" placeholder="Description" className="textarea textarea-bordered" required></textarea>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Add Service</button>
