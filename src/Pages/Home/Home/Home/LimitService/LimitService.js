@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
-const LimitService = () => {
-    const { _id, img, price, title, description } = useLoaderData();
+const LimitService = ({ service }) => {
+    const { _id, img, price, title, description } = service;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
