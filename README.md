@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 website name: Perfect Painters
 
-live site link: 
+live site link: https://perfect-painters.web.app
 
 features and functionality: 
 1. used firebase 
@@ -81,3 +81,4 @@ features and functionality:
 3. Used tailwind and daisy UI 
 4. used react icon 
 5. useLoader, useeffect 6. installed cors 
+6. load data form mongodb
