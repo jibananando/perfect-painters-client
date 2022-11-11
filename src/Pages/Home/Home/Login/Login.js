@@ -7,6 +7,38 @@ const Login = () => {
     useTitle('Login');
     const handleLogin = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        Login(email, password)
+            .then(result => {
+                const user = result.user;
+
+
+                const currentUser = {
+                    email: user.email
+                }
+                console.log(currentUser);
+
+                fetch('https://perfect-painters-server.vercel.app/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('token', data.token)
+                    })
+
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
     }
 
     return (
