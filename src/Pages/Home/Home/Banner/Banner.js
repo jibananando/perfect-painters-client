@@ -23,7 +23,6 @@ const Banner = () => {
                 <a href="#item3" className="btn btn-xs">3</a>
                 <a href="#item4" className="btn btn-xs">4</a>
             </div>
-            <progress className="progress"></progress>
         </div>
     );
 };

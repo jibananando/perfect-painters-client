@@ -3,8 +3,12 @@ import Banner from '../Banner/Banner';
 import LatestWork from '../../LatestWork/LatestWork';
 import Packages from '../../Package/Packages';
 import useTitle from '../../../../hooks/useTitle';
-import LimitService from './LimitService/LimitService';
 import ServiceCard from '../../Services/ServiceCard';
+import ServiceAreas from './ServiceAreas/ServiceAreas';
+import Team from './Team/Team';
+import Blog from '../Blog/Blog';
+import CustomerBenefits from '../CustomerBenefits/CustomerBenefits';
+
 
 const Home = () => {
     useTitle('Home');
@@ -31,6 +35,10 @@ const Home = () => {
             {/* <LimitService></LimitService> */}
             <LatestWork></LatestWork>
             <Packages></Packages>
+            <ServiceAreas></ServiceAreas>
+            <Team></Team>
+            <CustomerBenefits></CustomerBenefits>
+
         </div>
     );
 };

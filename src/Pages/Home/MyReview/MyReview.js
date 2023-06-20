@@ -5,7 +5,17 @@ const MyReview = () => {
     useTitle('MyReview');
     return (
         <div>
-            <h3>this is my review page</h3>
+            <label htmlFor="my-modal" class="btn modal-button">open modal</label>
+
+<input type="checkbox" id="modal" className="modal-toggle" />
+<div className="modal">
+  <div className="modal-box">
+     <h1> Yooo </h1>
+     <div className="modal-action">
+      <label htmlFor="my-modal" className="btn">Yay!</label>
+     </div>
+  </div>
+</div>
         </div>
     );
 };
