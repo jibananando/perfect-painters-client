@@ -22,7 +22,7 @@ const ServiceAreasMap = () => {
 
     return (
         <div>
-            <h2 className="text-2xl font-bold mb-4">Service Areas Map</h2>
+            <div><h1 className="text-4xl font-bold text-center mt-16 mb-16">Service Areas Map</h1></div>
             <ReactMapGL
                 {...viewport}
                 mapboxApiAccessToken={"tk.eyJ1IjoibWFwYm94IiwiZXhwIjoxNDczOTY3NjczLCJpYXQiOjE0NzM5Njc2NDMsInNjb3BlcyI6WyJzdHlsZXM6cmVhZCIsImZvbnRzOnJlYWQiXSwiY2xpZW50IjoiYXBpIn0.ZepsWvpjTMlpePE4IQBs0g"}

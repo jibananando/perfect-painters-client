@@ -8,6 +8,10 @@ import ServiceAreas from './ServiceAreas/ServiceAreas';
 import Team from './Team/Team';
 import Blog from '../Blog/Blog';
 import CustomerBenefits from '../CustomerBenefits/CustomerBenefits';
+import ContactUs from './ContactUs/ContactUs';
+import CustomerReviews from './CustomerReviews/CustomerReviews';
+import FrequentlyUsedColors from './FrequentlyUsedColors/FrequentlyUsedColors';
+import Testimonials from './Testimonials/Testimonials';
 
 
 const Home = () => {
@@ -38,6 +42,12 @@ const Home = () => {
             <ServiceAreas></ServiceAreas>
             <Team></Team>
             <CustomerBenefits></CustomerBenefits>
+            <Blog></Blog>
+            <CustomerReviews></CustomerReviews>
+            <FrequentlyUsedColors></FrequentlyUsedColors>
+            <Testimonials></Testimonials>
+            <ContactUs></ContactUs>
+
 
         </div>
     );
